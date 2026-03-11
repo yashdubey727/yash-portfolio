@@ -309,15 +309,13 @@ export default function Home() {
               </a>
 
               <a
-                href="/resume-v2.pdf"
-                target="_blank"
-                rel="noopener noreferrer"
-                className={`rounded-full px-5 py-3 text-sm font-medium transition-all duration-300 ${theme.buttonAlt}`}
-              >
-                <span className="inline-flex items-center gap-2">
-                  <FileText size={16} /> Resume
-                </span>
-              </a>
+  href="/resume-v2.pdf"
+  target="_blank"
+  rel="noopener noreferrer"
+  className={`rounded-full px-5 py-3 text-sm font-medium ${theme.buttonAlt}`}
+>
+  <span className="inline-flex items-center gap-2"><FileText size={16} /> Resume</span>
+</a>
 
               <a
                 href="https://github.com/yashdubey727?tab=repositories"
