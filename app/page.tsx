@@ -28,23 +28,40 @@ const projects = [
     title: "AI Launch Copilot",
     subtitle: "AI Product Strategy and Go-to-Market Prototype",
     featured: true,
+    problem:
+      "Product teams often struggle to turn messy launch inputs into clear positioning, messaging, rollout plans, and cross-functional execution.",
+    impact: "Improved launch planning clarity and reduced planning friction through an AI-assisted GTM workflow prototype.",
     points: [
       "Built an AI-powered launch planning copilot to structure positioning, customer segmentation, messaging, and rollout decisions for product teams.",
-      "Designed workflows for launch planning, cross-functional alignment, and execution tracking to reduce planning friction and improve decision speed.",
-      "Combined product strategy, AI-assisted content generation, and structured planning to simulate a more scalable launch management experience.",
+      "Designed workflows for launch planning, cross-functional alignment, and execution tracking to improve decision speed and team coordination.",
+      "Combined product strategy, AI-assisted content generation, and structured planning to simulate a scalable launch management experience.",
     ],
     tags: ["Product Strategy", "Go-to-Market", "AI Workflow", "Launch Planning"],
-    links: [],
+    image: "/launch-copilot.png",
+    links: [
+      {
+        label: "GitHub",
+        href: "https://github.com/yashdubey727/ai-launch-copilot",
+      },
+      {
+        label: "Live Demo",
+        href: "https://ai-launch-copilot.vercel.app",
+      },
+    ],
   },
   {
     title: "AI Dispute Resolution Engine",
     subtitle: "Enterprise Fintech Concept inspired by Stripe",
+    problem:
+      "Dispute operations are slow, manual, and expensive, making it hard for teams to triage cases efficiently and protect margin.",
+    impact: "$325M simulated annual net value with 64% automated triage and AUC 0.80 model validation.",
     points: [
       "Designed an AI-powered dispute workflow using NLP classification, logistic regression, threshold optimization, and workflow orchestration across 1M+ dispute records.",
       "Achieved 64% automated triage at t1=0.055, with AUC 0.80 validation and a simulated $325M annual net value impact.",
       "Built an end-to-end ML pipeline with synthetic data modeling, feature engineering, economic simulation, and product logic for operational decisioning.",
     ],
     tags: ["NLP", "Logistic Regression", "ML Pipeline", "Workflow Automation"],
+    image: "/dispute-engine.png",
     links: [
       {
         label: "GitHub",
@@ -59,12 +76,16 @@ const projects = [
   {
     title: "AI EV Mobility Copilot",
     subtitle: "AI Product Prototype inspired by Mercedes-Benz",
+    problem:
+      "EV drivers face fragmented planning across charging, routing, battery constraints, and personal preferences.",
+    impact: "Improved charging efficiency by 15 to 20% and reduced planning friction by about 40% in the prototype experience.",
     points: [
       "Built a RAG-powered EV planning copilot using ChromaDB, SentenceTransformers, optimization algorithms, and a Streamlit prototype.",
       "Delivered battery-aware charging recommendations that improved charging efficiency by 15 to 20% across modeled journeys.",
       "Translated natural-language preferences into route-aware optimization, reducing trip planning friction by about 40% in the prototype experience.",
     ],
     tags: ["RAG", "ChromaDB", "SentenceTransformers", "Streamlit"],
+    image: "/ev-copilot.png",
     links: [
       {
         label: "GitHub",
@@ -79,22 +100,30 @@ const projects = [
   {
     title: "Reimagining Digital Childhoods",
     subtitle: "Product Strategy Initiative",
+    problem:
+      "Digital experiences for children often lack clear monetization logic, durable engagement strategy, and thoughtful experience trade-off design.",
+    impact: "$10B TAM framing with strategic roadmap, KPI definition, and monetization analysis for product decision-making.",
     points: [
       "Conducted $10B TAM analysis, competitive benchmarking, and KPI definition to evaluate monetization and positioning opportunities.",
       "Developed feature concepts, engagement hypotheses, and roadmap prioritization tied to experimentation and growth planning.",
       "Created an executive strategy deck on revenue potential, user experience trade-offs, and cross-functional decision support.",
     ],
     tags: ["Product Strategy", "Market Sizing", "Monetization", "KPIs"],
+    image: "/digital-childhood.png",
     links: [{ label: "Case Study", href: "/digital-childhood.pdf" }],
   },
   {
     title: "Operational Risk Event Prediction",
     subtitle: "Machine Learning Risk Analytics",
+    problem:
+      "Operational risk teams need earlier detection of enterprise risk patterns without relying only on reactive review.",
+    impact: "Improved reliability of structured risk detection through validated ML-based decision support.",
     points: [
       "Built Random Forest and Logistic Regression models to identify operational risk patterns across structured enterprise datasets.",
       "Validated model quality using ROC-AUC, precision-recall evaluation, cross-validation, and bias testing for reliable decision support.",
     ],
     tags: ["Random Forest", "Logistic Regression", "ROC-AUC", "Bias Testing"],
+    image: "/risk-prediction.png",
     links: [],
   },
 ];
@@ -182,6 +211,9 @@ export default function Home() {
       buttonAlt: dark
         ? "bg-white/6 text-white hover:bg-white/12"
         : "bg-slate-100 text-slate-950 hover:bg-slate-200",
+      impactCard: dark
+        ? "border-cyan-400/20 bg-cyan-400/10"
+        : "border-cyan-200 bg-cyan-50",
     }),
     [dark]
   );
@@ -433,6 +465,32 @@ export default function Home() {
                   ) : null}
                   <div className={`mb-2 text-sm ${theme.textSoft}`}>{project.subtitle}</div>
                   <h3 className="text-2xl font-semibold">{project.title}</h3>
+                </div>
+
+                <div className={`mb-5 rounded-2xl border p-4 ${theme.border}`}>
+                  <div className="mb-1 text-xs font-semibold uppercase tracking-[0.18em] text-cyan-300">
+                    Problem
+                  </div>
+                  <p className={`text-sm leading-6 md:text-[15px] ${theme.textSoft}`}>
+                    {project.problem}
+                  </p>
+                </div>
+
+                <div className="mb-5 overflow-hidden rounded-2xl border border-white/10">
+                  <img
+                    src={project.image}
+                    alt={`${project.title} visual`}
+                    className="h-[220px] w-full object-cover"
+                  />
+                </div>
+
+                <div className={`mb-5 rounded-2xl border p-4 ${theme.impactCard}`}>
+                  <div className="mb-1 text-xs font-semibold uppercase tracking-[0.18em]">
+                    Impact
+                  </div>
+                  <p className="text-sm leading-6 md:text-[15px]">
+                    {project.impact}
+                  </p>
                 </div>
 
                 <div className="space-y-3">
