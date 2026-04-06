@@ -25,49 +25,74 @@ import {
 
 const projects = [
   {
+    title: "AI Launch Copilot",
+    subtitle: "AI Product Strategy and Go-to-Market Prototype",
+    featured: true,
+    points: [
+      "Built an AI-powered launch planning copilot to structure positioning, customer segmentation, messaging, and rollout decisions for product teams.",
+      "Designed workflows for launch planning, cross-functional alignment, and execution tracking to reduce planning friction and improve decision speed.",
+      "Combined product strategy, AI-assisted content generation, and structured planning to simulate a more scalable launch management experience.",
+    ],
+    tags: ["Product Strategy", "Go-to-Market", "AI Workflow", "Launch Planning"],
+    links: [],
+  },
+  {
+    title: "AI Dispute Resolution Engine",
+    subtitle: "Enterprise Fintech Concept inspired by Stripe",
+    points: [
+      "Designed an AI-powered dispute workflow using NLP classification, logistic regression, threshold optimization, and workflow orchestration across 1M+ dispute records.",
+      "Achieved 64% automated triage at t1=0.055, with AUC 0.80 validation and a simulated $325M annual net value impact.",
+      "Built an end-to-end ML pipeline with synthetic data modeling, feature engineering, economic simulation, and product logic for operational decisioning.",
+    ],
+    tags: ["NLP", "Logistic Regression", "ML Pipeline", "Workflow Automation"],
+    links: [
+      {
+        label: "GitHub",
+        href: "https://github.com/yashdubey727/ai-dispute-resolution-engine",
+      },
+      {
+        label: "Live Demo",
+        href: "https://ai-dispute-resolution-engine-zho3kcfunlajv7jep9b7bs.streamlit.app/",
+      },
+    ],
+  },
+  {
+    title: "AI EV Mobility Copilot",
+    subtitle: "AI Product Prototype inspired by Mercedes-Benz",
+    points: [
+      "Built a RAG-powered EV planning copilot using ChromaDB, SentenceTransformers, optimization algorithms, and a Streamlit prototype.",
+      "Delivered battery-aware charging recommendations that improved charging efficiency by 15 to 20% across modeled journeys.",
+      "Translated natural-language preferences into route-aware optimization, reducing trip planning friction by about 40% in the prototype experience.",
+    ],
+    tags: ["RAG", "ChromaDB", "SentenceTransformers", "Streamlit"],
+    links: [
+      {
+        label: "GitHub",
+        href: "https://github.com/yashdubey727/ai-ev-mobility-copilot?tab=readme-ov-file",
+      },
+      {
+        label: "Live Demo",
+        href: "https://ai-ev-mobility-copilot.streamlit.app",
+      },
+    ],
+  },
+  {
     title: "Reimagining Digital Childhoods",
     subtitle: "Product Strategy Initiative",
     points: [
-      "$10B TAM analysis, competitive benchmarking, and KPI definition for monetization and positioning.",
-      "Feature definitions, engagement hypotheses, and roadmap prioritization tied to experimentation planning.",
-      "Executive strategy deck on revenue potential, experience trade-offs, and cross-functional decision support.",
+      "Conducted $10B TAM analysis, competitive benchmarking, and KPI definition to evaluate monetization and positioning opportunities.",
+      "Developed feature concepts, engagement hypotheses, and roadmap prioritization tied to experimentation and growth planning.",
+      "Created an executive strategy deck on revenue potential, user experience trade-offs, and cross-functional decision support.",
     ],
     tags: ["Product Strategy", "Market Sizing", "Monetization", "KPIs"],
     links: [{ label: "Case Study", href: "/digital-childhood.pdf" }],
   },
   {
-    title: "AI Dispute Resolution Engine",
-    subtitle: "Enterprise Fintech Concept, inspired by Stripe",
-    points: [
-      "NLP classification, logistic regression, threshold optimization, and workflow orchestration on 1M+ dispute records.",
-      "64% automated triage at t1=0.055 with $325M annual net value and AUC 0.80 validation.",
-      "End-to-end ML pipeline with synthetic data modeling, feature engineering, and economic simulation.",
-    ],
-    tags: ["NLP", "Logistic Regression", "ML Pipeline", "Workflow Automation"],
-    links: [{ label: "GitHub", href: "https://github.com/yashdubey727/ai-dispute-resolution-engine" },
-            { label: "Live Demo", href: "https://ai-dispute-resolution-engine-zho3kcfunlajv7jep9b7bs.streamlit.app/" },
-    ],
-  },
-  {
-    title: "AI EV Mobility Copilot",
-    subtitle: "AI Product Prototype, inspired by Mercedes-Benz",
-    points: [
-      "RAG stack with ChromaDB, SentenceTransformers, optimization algorithms, and Streamlit prototype.",
-      "Battery-aware charging recommendations improved charging efficiency by 15 to 20%.",
-      "Natural-language preference parsing and route-aware optimization cut planning friction by about 40%.",
-    ],
-    tags: ["RAG", "ChromaDB", "SentenceTransformers", "Streamlit"],
-    links: [
-      { label: "GitHub", href: "https://github.com/yashdubey727/ai-ev-mobility-copilot?tab=readme-ov-file" },
-      { label: "Live Demo", href: "https://ai-ev-mobility-copilot.streamlit.app" },
-    ],
-  },
-  {
     title: "Operational Risk Event Prediction",
     subtitle: "Machine Learning Risk Analytics",
     points: [
-      "Random Forest and Logistic Regression models to detect operational risk patterns in structured datasets.",
-      "ROC-AUC, precision-recall, and bias testing for reliable and fair risk prediction.",
+      "Built Random Forest and Logistic Regression models to identify operational risk patterns across structured enterprise datasets.",
+      "Validated model quality using ROC-AUC, precision-recall evaluation, cross-validation, and bias testing for reliable decision support.",
     ],
     tags: ["Random Forest", "Logistic Regression", "ROC-AUC", "Bias Testing"],
     links: [],
@@ -79,9 +104,9 @@ const experience = [
     title: "ICICI Bank",
     role: "Fintech Payments Operations",
     points: [
-      "$119M+ daily Card Acquiring and PayFac flows, improving revenue realization by 20%.",
-      "DCC expansion across 10K+ cross-border merchants.",
-      "Payments infrastructure with 15+ aggregator partners including Razorpay, Paytm, Amazon Pay, Visa, and American Express.",
+      "Managed $119M+ in daily Card Acquiring and PayFac flows, improving revenue realization by 20%.",
+      "Supported Dynamic Currency Conversion expansion across 10K+ cross-border merchants.",
+      "Worked across payments infrastructure with 15+ aggregator partners including Razorpay, Paytm, Amazon Pay, Visa, and American Express.",
     ],
     tags: ["PayFac", "DCC", "Payments", "Settlement"],
   },
@@ -89,8 +114,8 @@ const experience = [
     title: "IIM Ahmedabad",
     role: "Product & Analytics Intern",
     points: [
-      "200GB+ Twitter data processed with Python and Twitter API for sentiment and consumer trend analysis.",
-      "NLP pipelines and hybrid CNN-LSTM model using NLTK, Scikit-learn, and Keras achieved 94% accuracy.",
+      "Processed 200GB+ of Twitter data using Python and the Twitter API to analyze sentiment and consumer behavior trends.",
+      "Built NLP pipelines and a hybrid CNN-LSTM model using NLTK, Scikit-learn, and Keras, achieving 94% accuracy.",
     ],
     tags: ["NLP", "CNN-LSTM", "Python", "Analytics"],
   },
@@ -98,8 +123,8 @@ const experience = [
     title: "VNIT Nagpur",
     role: "Machine Learning Research Intern",
     points: [
-      "Medical imaging classification pipelines improved through feature engineering and model tuning.",
-      "HoG, LBP, and OpenCV workflows for feature extraction, evaluation, and performance optimization.",
+      "Improved medical imaging classification pipelines through feature engineering, experimentation, and model tuning.",
+      "Used HoG, LBP, and OpenCV workflows for feature extraction, evaluation, and performance optimization.",
     ],
     tags: ["Computer Vision", "OpenCV", "Feature Engineering"],
     links: [{ label: "Publication", href: "/publication.pdf" }],
@@ -231,7 +256,7 @@ export default function Home() {
 
         <motion.section
           {...fadeUp}
-          className="grid gap-10 pb-16 pt-8 md:grid-cols-[1.18fr_0.82fr] md:items-center md:pb-24"
+          className="grid gap-10 pb-16 pt-8 md:grid-cols-[1.2fr_0.8fr] md:items-center md:pb-24"
         >
           <div>
             <motion.div
@@ -259,13 +284,13 @@ export default function Home() {
               initial={{ opacity: 0, y: 24 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, delay: 0.08 }}
-              className={`max-w-4xl text-5xl font-semibold tracking-tight md:text-7xl ${
+              className={`max-w-4xl text-4xl font-semibold tracking-tight md:text-6xl ${
                 dark
                   ? "bg-gradient-to-r from-white via-slate-100 to-slate-300 bg-clip-text text-transparent"
                   : "bg-gradient-to-r from-slate-950 via-slate-800 to-slate-600 bg-clip-text text-transparent"
               }`}
             >
-              Product manager working at the intersection of user needs, business strategy, and emerging AI.
+              Building product experiences at the intersection of user insight, business strategy, fintech, and AI.
             </motion.h1>
 
             <motion.p
@@ -274,7 +299,7 @@ export default function Home() {
               transition={{ duration: 0.7, delay: 0.15 }}
               className={`mt-6 max-w-2xl text-base leading-7 md:text-lg ${theme.textSoft}`}
             >
-              NYU graduate student building products that drive business impact, operational efficiency, and user value.
+              I am an NYU graduate student with experience across payments, analytics, research, and AI product concepts. I build products and case studies grounded in user needs, measurable business outcomes, and operational scale.
             </motion.p>
 
             <motion.div
@@ -309,13 +334,15 @@ export default function Home() {
               </a>
 
               <a
-  href="/resume-v2.pdf"
-  target="_blank"
-  rel="noopener noreferrer"
-  className={`rounded-full px-5 py-3 text-sm font-medium ${theme.buttonAlt}`}
->
-  <span className="inline-flex items-center gap-2"><FileText size={16} /> Resume</span>
-</a>
+                href="/resume-v2.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className={`rounded-full px-5 py-3 text-sm font-medium ${theme.buttonAlt}`}
+              >
+                <span className="inline-flex items-center gap-2">
+                  <FileText size={16} /> Resume
+                </span>
+              </a>
 
               <a
                 href="https://github.com/yashdubey727?tab=repositories"
@@ -348,10 +375,10 @@ export default function Home() {
             className="grid gap-6 justify-items-end"
           >
             <div
-              className={`relative w-full max-w-[320px] overflow-hidden rounded-[32px] border p-3 shadow-[0_0_60px_rgba(56,189,248,0.08)] ${theme.border} ${theme.bgSoft}`}
+              className={`relative w-full max-w-[280px] overflow-hidden rounded-[28px] border p-3 shadow-[0_0_60px_rgba(56,189,248,0.08)] ${theme.border} ${theme.bgSoft}`}
             >
               <div className="absolute inset-0 bg-gradient-to-br from-cyan-400/20 via-violet-400/15 to-transparent" />
-              <div className="relative aspect-[4/5] overflow-hidden rounded-[24px] border border-white/10">
+              <div className="relative aspect-[4/5] overflow-hidden rounded-[22px] border border-white/10">
                 <img
                   src="/profile.jpeg"
                   alt="Yash Dubey"
@@ -363,7 +390,7 @@ export default function Home() {
             <div className={`w-full rounded-[28px] border p-6 md:p-7 ${theme.border} ${theme.bgSoft}`}>
               <div className="grid grid-cols-2 gap-5">
                 {[
-                  ["4", "Product case studies"],
+                  ["5", "Product case studies"],
                   ["$119M+", "Daily payments exposure"],
                   ["$325M", "Simulated product impact"],
                   ["600+", "Event operations scale"],
@@ -391,12 +418,19 @@ export default function Home() {
           <div className="grid gap-6 lg:grid-cols-2">
             {projects.map((project) => (
               <motion.article
-  key={project.title}
-  whileHover={{ y: -8, scale: 1.01 }}
+                key={project.title}
+                whileHover={{ y: -8, scale: 1.01 }}
                 transition={{ duration: 0.25 }}
-                className={`rounded-[28px] border p-6 md:p-7 shadow-[0_10px_30px_rgba(2,8,23,0.08)] transition-all duration-300 ${theme.border} ${theme.hover} ${theme.bgSoft}`}
+                className={`rounded-[28px] border p-6 md:p-7 shadow-[0_10px_30px_rgba(2,8,23,0.08)] transition-all duration-300 ${theme.border} ${theme.hover} ${theme.bgSoft} ${
+                  project.featured ? "lg:col-span-2" : ""
+                }`}
               >
                 <div className="mb-4">
+                  {project.featured ? (
+                    <div className="mb-3 inline-flex rounded-full border border-cyan-400/30 bg-cyan-400/10 px-3 py-1 text-xs font-medium text-cyan-200">
+                      Featured project
+                    </div>
+                  ) : null}
                   <div className={`mb-2 text-sm ${theme.textSoft}`}>{project.subtitle}</div>
                   <h3 className="text-2xl font-semibold">{project.title}</h3>
                 </div>
