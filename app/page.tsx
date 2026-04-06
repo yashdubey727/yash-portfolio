@@ -25,30 +25,31 @@ import {
 
 const projects = [
   {
-    title: "AI Launch Copilot",
-    subtitle: "AI Product Strategy and Go-to-Market Prototype",
-    featured: true,
-    problem:
-      "Product teams often struggle to turn messy launch inputs into clear positioning, messaging, rollout plans, and cross-functional execution.",
-    impact: "Improved launch planning clarity and reduced planning friction through an AI-assisted GTM workflow prototype.",
-    points: [
-      "Built an AI-powered launch planning copilot to structure positioning, customer segmentation, messaging, and rollout decisions for product teams.",
-      "Designed workflows for launch planning, cross-functional alignment, and execution tracking to improve decision speed and team coordination.",
-      "Combined product strategy, AI-assisted content generation, and structured planning to simulate a scalable launch management experience.",
-    ],
-    tags: ["Product Strategy", "Go-to-Market", "AI Workflow", "Launch Planning"],
-    image: "/launch-copilot.png",
-    links: [
-      {
-        label: "GitHub",
-        href: "https://github.com/yashdubey727/ai-launch-copilot",
-      },
-      {
-        label: "Live Demo",
-        href: "https://ai-launch-copilot.vercel.app",
-      },
-    ],
-  },
+  title: "AI Launch Copilot",
+  subtitle: "AI Product Strategy and Go-to-Market Prototype",
+  featured: true,
+  problem:
+    "Product teams often struggle to turn messy launch inputs into clear positioning, messaging, rollout plans, and cross-functional execution.",
+  impact:
+    "Improved launch planning clarity and reduced planning friction through an AI-assisted GTM workflow prototype.",
+  points: [
+    "Built an AI-powered launch planning copilot to structure positioning, customer segmentation, messaging, and rollout decisions for product teams.",
+    "Designed workflows for launch planning, cross-functional alignment, and execution tracking to improve decision speed and team coordination.",
+    "Combined product strategy, AI-assisted content generation, and structured planning to simulate a scalable launch management experience.",
+  ],
+  tags: ["Product Strategy", "Go-to-Market", "AI Workflow", "Launch Planning"],
+  image: "/launch-copilot.png",
+  links: [
+    {
+      label: "GitHub",
+      href: "https://github.com/yashdubey727/ai-launch-copilot",
+    },
+    {
+      label: "Live Demo",
+      href: "https://ai-launch-copilot.vercel.app",
+    },
+  ],
+},
   {
     title: "AI Dispute Resolution Engine",
     subtitle: "Enterprise Fintech Concept inspired by Stripe",
@@ -524,6 +525,21 @@ export default function Home() {
                     ))}
                   </div>
                 ) : null}
+                {project.links?.length ? (
+  <div className="mt-6 flex flex-wrap gap-4 text-sm">
+    {project.links.map((link) => (
+      <a
+        key={link.label}
+        href={link.href}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="inline-flex items-center gap-1 font-medium hover:opacity-80"
+      >
+        {link.label} <ArrowUpRight size={14} />
+      </a>
+    ))}
+  </div>
+) : null}
               </motion.article>
             ))}
           </div>
