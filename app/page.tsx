@@ -509,22 +509,6 @@ export default function Home() {
                     </span>
                   ))}
                 </div>
-
-                {project.links?.length ? (
-                  <div className="mt-6 flex flex-wrap gap-4 text-sm">
-                    {project.links.map((link) => (
-                      <a
-                        key={link.label}
-                        href={link.href}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="inline-flex items-center gap-1 font-medium hover:opacity-80"
-                      >
-                        {link.label} <ArrowUpRight size={14} />
-                      </a>
-                    ))}
-                  </div>
-                ) : null}
                 {project.links?.length ? (
   <div className="mt-6 flex flex-wrap gap-4 text-sm">
     {project.links.map((link) => (
